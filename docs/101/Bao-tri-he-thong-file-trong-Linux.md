@@ -1,4 +1,4 @@
-#Bảo trì hệ thống file trong Linux
+# Bảo trì hệ thống file trong Linux
 
 -`fsck` Tiện ích kiểm tra file system. Có thể được gọi thông qua dòng lệnh và đc cấu hình trong file `/etc/fstab`.
 Thiết bị phải được unmount trước khi fsck chạy để kiểm tra

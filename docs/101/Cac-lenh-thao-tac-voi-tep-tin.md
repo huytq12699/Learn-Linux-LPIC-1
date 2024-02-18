@@ -45,14 +45,14 @@
 	```sh
 	cp A.txt B.txt 
 	```
-	+ Copy nhiều file vào 1 thư mục khác. Ví dụ: Copy file A.txt, B.txt, C.txt, D.exe, E.exe vào thư mục tu vừa tạo
+	+ Copy nhiều file vào 1 thư mục khác. Ví dụ: Copy file `A.txt, B.txt, C.txt, D.exe, E.exe` vào thư mục tu vừa tạo
 	```sh
 	mkdir huy
 	touch ./{A,B,C}.txt
 	touch ./{D,E}.exe
 	cp A.txt B.txt C.txt D.exe E.exe huy/
 	```
-	+ Copy file từ thư mục này sang thư mục khác. Ví dụ: Copy file A.txt từ thư mục tu sang thư mục B
+	+ Copy file từ thư mục này sang thư mục khác. Ví dụ: Copy file `A.txt` từ thư mục `huy` sang thư mục B
 	```sh
 	mkdir B
 	cp /huy/A.txt B
@@ -66,14 +66,14 @@
 	"D.exe" -> "huy/D.exe"
 	"E.exe" -> "huy/E.exe"
 	```
-	+ Để giữ nguyên thuộc tính file khi copy ta thêm `-p`. Các thuộc tính giữ nguyên là: access time, modification date, user ID, group ID, file flag, file mode, access control lists
+	+ Để giữ nguyên thuộc tính file khi copy ta thêm `-p`. Các thuộc tính giữ nguyên là: `access time, modification date, user ID, group ID, file flag, file mode, access control lists`
 	```sh
 	cp -p /huy/A.txt B
 	```
 - Copy thư mục: tương tự file. Ta thêm `-a` hoặc `-r` 
 	+ `-r`: Copy toàn bộ thư mục hoặc file con của thư mục được copy
-	
-	+ `-a`: Bao gồm option `-r` và thực hiện duy trì các thuộc tính của file hoặc folder như file mode, ownership, timestamps...
+
+	+ `-a`: Bao gồm option `-r` và thực hiện duy trì các thuộc tính của file hoặc folder như `file mode, ownership, timestamps...``
 
 - Copy không cho ghi đè: thêm `-n`
 

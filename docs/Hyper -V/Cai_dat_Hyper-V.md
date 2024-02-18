@@ -1,6 +1,6 @@
 # Cài đặt Hyper -V trên Windows
 
-1. Kiểm tra yêu cầu hệ thống:
+## 1. Kiểm tra yêu cầu hệ thống:
 
 - Hyper-V yêu cầu một bộ xử lý hỗ trợ ảo hóa, như Intel VT-x hoặc AMD-V.
 
@@ -10,7 +10,7 @@
 
 - Trên hệ điều hành Windows Server, Hyper-V có sẵn như một tính năng của Windows Server.
 
-2. Cài đặt
+## 2. Cài đặt
 
 - Bước 1: Mở `Control Panel (Bảng điều khiển)` bằng cách nhấn tổ hợp phím `Windows + R`, gõ `control panel` và nhấn `Enter`.
 
@@ -21,7 +21,7 @@
 - Bước 4: Một hộp thoại cảnh báo sẽ xuất hiện. Nhấn `Yes` để tiếp tục. Hệ thống có thể yêu cầu khởi động lại máy tính của bạn sau khi 
 cài đặt hoàn tất.
 
-3. Kiểm tra cài đặt
+## 3. Kiểm tra cài đặt
 
 - Sau khi khởi động lại máy tính, bạn có thể mở `Hyper-V Manager` từ menu Start để quản lý các máy ảo của mình.
 

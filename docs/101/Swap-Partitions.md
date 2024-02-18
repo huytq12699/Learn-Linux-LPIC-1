@@ -1,4 +1,4 @@
-#Phân vùng Swap Partitions
+# Phân vùng Swap Partitions
 
 -`fdisk, gdisk, parted` Các công cụ này đều có thể được sử dụng để tạo phân vùng cho swap
 

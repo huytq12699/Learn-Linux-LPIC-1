@@ -54,20 +54,24 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 
 + `type` Được sử dụng để xác định kiểu của một đối tượng như là một hàm, file bí danh, tích hợp sẵn hoặc từ khóa
 ```sh 
-		VD: "type type" sẽ hiển thị loại của lênh "type"
-		```
+		VD: "type type" sẽ hiển thị loại của lệnh "type"
+```
 
 + `Trích dẫn 'yếu' hay dấu ngoặc kép`: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn 
 hoặc cho phép so khớp sẽ không được mở rộng
-```sh
-		VD: `echo "$PATH"`, hiển thị lên giá trị của biến `PATH`
- 			`ls"*"` sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là '*'
- 		```
+	Ví dụ:
 
-`+ Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn,không có gì được thực thi
 ```sh
-	VD: `echo "$PATH"` sẽ in ra `$PATH` trên màn hình
-	```
+	`echo "$PATH"`, hiển thị lên giá trị của biến `PATH`
+ 	`ls"*"` sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là '*'
+ ```
+
+`+ Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi
+	Ví dụ:
+
+```sh
+	`echo "$PATH"` sẽ in ra `$PATH` trên màn hình
+```
 
 +`history` Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
 đã được thực thi trước đó

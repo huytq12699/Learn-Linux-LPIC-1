@@ -20,6 +20,7 @@
 	+ `--wildcards`: Tìm và xuất file bất kỳ trong file nén
 
 # Các lệnh nén
+
 - Nén file/thư mục sang định dạng "tar": `# tar -cvf`
 	+ `# tar -cvf filenenA.tar /mnt/A` : Nén thư mục `A` thành `filenenA.tar` và show quá trình nén
 
@@ -27,6 +28,7 @@
 	+ `# tar -cvfz filenenA.tar.gz /mnt/A`: Nén thư mục `A` thành `filenenA.tar.gz` và show quá trình nén
 
 # Các lệnh giải nén
+
 + `tar -xvf filenenA.tar /mnt/A`
 
 + `tar -xvfz filenenA.tar.gz /mnt/A`

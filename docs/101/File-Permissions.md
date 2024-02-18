@@ -6,11 +6,10 @@ liên quan đến tệp và các quyền hoặc quyền nhất định: đọc, 
 - Các tệp có 3 loại quyền: đọc(r), ghi(w), thực thi(x). 3 quyền này được đại diện theo thứ tự: Người dùng (User), 
 Nhóm (group), Người dùng khác (other user).
 
-```sh
 |rwx: |rwx: |rwx:|
 |---|---|---|
 |u: |g:|o:|
-```
+
 
 # Giải thích ý nghĩa
 
@@ -39,12 +38,11 @@ chmod [options] [mode] file1 file2 file3 ...
 	+ `-R`: Recursive, áp dụng cho tất cả các file và folder bên trong
 
 	+ `-f`: force, thay đổi quyền trong cả trường hợp xảy ra lỗi
-	
+
 	+ `-v`: verbose, hiển thị đối tượng đã xử lý
 
 - Các mode:
 
-```sh
 |#|Permission|rwx|
 |-|----------|---|
 |7|read (2^2), write (2^1) and execute (2^0)|rwx|
@@ -55,6 +53,6 @@ chmod [options] [mode] file1 file2 file3 ...
 |2|write (2^1) only|-w-|
 |1|execute (2^0) only|--x|
 |0|none|---|
-```
+
 
 

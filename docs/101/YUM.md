@@ -19,21 +19,23 @@ và các phiên bản cũ của Fedora
 
 ## Các công cụ quản lý RPM khác
 
-- Zypper
+### Zypper
 
-+ được sử dụng cho SUSE Linux distributions
++ Được sử dụng cho SUSE Linux distributions
 
-+ vd: 	`zipper repos`
++ Vd: 
+
+		`zipper repos`
 
 		`zipper install vim`
 
-- DNF - Dndified yum
+### DNF - Dndified yum
 
-+ được sử dụng trong HĐH Linux Fedora distributions
++ Được sử dụng trong HĐH Linux Fedora distributions
 
-+ tương lai sẽ thay thế yum trong Red Hat EnterPrise Linux
++ Tương lai sẽ thay thế yum trong Red Hat EnterPrise Linux
 
-+ cú pháp câu lệnh sử dụng giống như Yum
++ Cú pháp câu lệnh sử dụng giống như Yum
 
 ## Các câu lệnh YUM
 

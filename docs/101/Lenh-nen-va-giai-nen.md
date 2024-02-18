@@ -33,7 +33,7 @@
 
 + `tar -xvfj filenenA.tar.bz2 /mnt/A`
 
-## Thêm file và folder vào file nén
+# Thêm file và folder vào file nén
 
 - Thêm file `abc.txt` vào `filenenA.tar`
 	+ `# tar -rvf filenenA.tar abc.txt`

@@ -5,6 +5,7 @@
 - `# ll`: Xem danh sách các file và thư mục hiện hành chi tiết
 
 - Chuyển thư mục (change directory): `# cd`
+
 	+ `cd /etc/selinux`: Chuyển tới thư mục /selinux/
 	+ `cd`: Chuyển về thư mục chính của người dùng
 	+ `cd A && ls`: Chuyển tới thư mục A và hiển thị danh sách file và các thư mục của nó
@@ -17,6 +18,7 @@
 - Tạo 1 tập tin dạng text: `# echo "" >> ~/<ten_tap_tin>`
 
 - Xóa tập tin: `# rm`
+
 	+ `# rm <ten_tap_tin>`: Xóa 1 tập tin
 	+ `# rm <tap_tin_1> <tap_tin_2>`: Xóa nhiều tập tin
 	+ `# rm /a/b/c/<tap_tin>`: Xóa tập tin theo đường dẫn
@@ -25,7 +27,8 @@
 	+ `# rm -I <ten_thu_muc>/file*`: Xóa hàng loạt file có cấu trúc file[...]
 
 - Xóa thư mục: `# rmdir`
-	+ `# rmdir <ten_thu_muc>`: hoặc `# rm -d`: Xóa 1 thư mục rỗng
+
+	+ `# rmdir <ten_thu_muc>` hoặc `# rm -d`: Xóa 1 thư mục rỗng
 	+ `# rm -r <ten_thu_muc>`: Xóa thư mục chứa các thư mục con và tập tin (có xác nhận cho từng đối tượng)
 	+ `# rm -rf <ten_thu_muc>`: Xóa thư mục chứa các thư mục con và tập tin (không xác nhận)
 
@@ -45,7 +48,7 @@
 	```sh
 	cp A.txt B.txt 
 	```
-	+ Copy nhiều file vào 1 thư mục khác. Ví dụ: Copy file `A.txt, B.txt, C.txt, D.exe, E.exe` vào thư mục tu vừa tạo
+	+ Copy nhiều file vào 1 thư mục khác. Ví dụ: Copy file `A.txt, B.txt, C.txt, D.exe, E.exe` vào thư mục `huy` vừa tạo
 	```sh
 	mkdir huy
 	touch ./{A,B,C}.txt
@@ -66,14 +69,14 @@
 	"D.exe" -> "huy/D.exe"
 	"E.exe" -> "huy/E.exe"
 	```
-	+ Để giữ nguyên thuộc tính file khi copy ta thêm `-p`. Các thuộc tính giữ nguyên là: `access time, modification date, user ID, group ID, file flag, file mode, access control lists`
+	+ Để giữ nguyên thuộc tính file khi copy ta thêm `-p`. Các thuộc tính giữ nguyên là: access time, modification date, user ID, group ID, file flag, file mode, access control lists
 	```sh
 	cp -p /huy/A.txt B
 	```
 - Copy thư mục: tương tự file. Ta thêm `-a` hoặc `-r` 
 	+ `-r`: Copy toàn bộ thư mục hoặc file con của thư mục được copy
 
-	+ `-a`: Bao gồm option `-r` và thực hiện duy trì các thuộc tính của file hoặc folder như `file mode, ownership, timestamps...``
+	+ `-a`: Bao gồm option `-r` và thực hiện duy trì các thuộc tính của file hoặc folder như file mode, ownership, timestamps...
 
 - Copy không cho ghi đè: thêm `-n`
 
@@ -81,5 +84,5 @@
 
 - So sánh 2 tệp tin hoặc 2 thư mục `diff`
 	```sh
-		diff -c a.txt b.txt
+	diff -c a.txt b.txt
 	```

@@ -73,7 +73,6 @@ hoặc cho phép so khớp sẽ không được mở rộng.
 
 `+ Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi.
 	Ví dụ:
-
 			`echo "$PATH"` sẽ in ra `$PATH` trên màn hình
 
 

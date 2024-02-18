@@ -16,7 +16,7 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 	+ các thiết lập quy định chức năng chung và vị trí cho các mục đích khác nhau
 	+ cú pháp: 
 	   ```sh
-	   VARIABLE=path,command,alias`
+	   VARIABLE=path,command,alias
 	     (BIẾN=đường dẫn,lệnh,bí danh)
 	     ```
 	Ví dụ: 
@@ -29,9 +29,9 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 - Ví dụ:
 	```sh
 		 function hello()
-		{
+			{
 			echo "Hello World!"
-		 }
+		 	}
 		 ```
 
 ## Các câu lệnh trong Bash Environment
@@ -56,14 +56,18 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 ```sh 
 		VD: "type type" sẽ hiển thị loại của lênh "type"
 		```
-+ Trích dẫn 'yếu' hay còn gọi dấu ngoặc kép: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn hoặc cho phép so khớp sẽ không được mở rộng
+
++ Trích dẫn 'yếu' hay còn gọi dấu ngoặc kép: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn 
+hoặc cho phép so khớp sẽ không được mở rộng
 ```sh
 		VD: `echo "$PATH"`, hiển thị lên giá trị của biến `PATH`
  			`ls"*"` sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là '*'
- 		```	
+ 		```
+
 + Trích dẫn 'mạnh': Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi
 ```sh
 	VD: `echo "$PATH"` sẽ in ra `$PATH` trên màn hình
 	```
+
 +`history` Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
 đã được thực thi trước đó

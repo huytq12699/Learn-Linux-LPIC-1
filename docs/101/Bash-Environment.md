@@ -57,14 +57,14 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 		VD: "type type" sẽ hiển thị loại của lênh "type"
 		```
 
-+ Trích dẫn 'yếu' hay còn gọi dấu ngoặc kép: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn 
++ `Trích dẫn 'yếu' hay dấu ngoặc kép`: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn 
 hoặc cho phép so khớp sẽ không được mở rộng
 ```sh
 		VD: `echo "$PATH"`, hiển thị lên giá trị của biến `PATH`
  			`ls"*"` sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là '*'
  		```
 
-+ Trích dẫn 'mạnh': Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi
+`+ Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn,không có gì được thực thi
 ```sh
 	VD: `echo "$PATH"` sẽ in ra `$PATH` trên màn hình
 	```

@@ -2,7 +2,9 @@
 
 Để cài đặt và sử dụng KVM trên một hệ thống Linux, bạn cần thực hiện các bước sau:
 
-## 1. Kiểm tra hỗ trợ ảo hóa: Trước tiên, bạn cần kiểm tra xem CPU của máy tính hỗ trợ ảo hóa hay không? Điều này có thể được thực hiện bằng cách chạy lệnh sau trong terminal
+## 1. Kiểm tra hỗ trợ ảo hóa
+ 
+- Trước tiên, bạn cần kiểm tra xem CPU của máy tính hỗ trợ ảo hóa hay không? Điều này có thể được thực hiện bằng cách chạy lệnh sau trong terminal
 
 ```sh
 	egrep -c '(vmx|svm)' /proc/cpuinfo

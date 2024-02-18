@@ -12,7 +12,7 @@
 
 3. `Snapshot và Cloning`: Hyper-V cho phép bạn tạo bản sao của máy ảo (cloning) và lưu trạng thái hiện tại của máy ảo (snapshot), giúp quản lý và sao lưu hệ thống một cách dễ dàng.
 
-4. `Integration Services`:` Hyper-V cung cấp các dịch vụ tích hợp (integration services) giữa máy ảo và hệ điều hành chủ, giúp tối ưu hóa hiệu suất và tính linh hoạt trong việc quản lý máy ảo.
+4. `Integration Services`: Hyper-V cung cấp các dịch vụ tích hợp (integration services) giữa máy ảo và hệ điều hành chủ, giúp tối ưu hóa hiệu suất và tính linh hoạt trong việc quản lý máy ảo.
 
 5. `Quản lý từ xa`: Bạn có thể quản lý các máy chủ Hyper-V từ xa bằng cách sử dụng công cụ quản lý Hyper-V hoặc PowerShell.
 

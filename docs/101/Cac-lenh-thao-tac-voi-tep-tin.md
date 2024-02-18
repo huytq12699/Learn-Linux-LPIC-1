@@ -1,14 +1,21 @@
-*Các lệnh thao tác với tập tin*
+# Các lệnh thao tác với tập tin
+
 - `# ls`: Xem danh sách các file và thư mục hiện hành
+
 - `# ll`: Xem danh sách các file và thư mục hiện hành chi tiết
+
 - Chuyển thư mục (change directory): `# cd`
 	+ `cd /etc/selinux`: Chuyển tới thư mục /selinux/
 	+ `cd`: Chuyển về thư mục chính của người dùng
 	+ `cd A && ls`: Chuyển tới thư mục A và hiển thị danh sách file và các thư mục của nó
 	+ `cd ..`: Chuyển về thư mục cha của thư mục hiện tại
+
 - Tạo 1 thư mục mới: `# mkdir <ten_thu_muc>`
+
 - Tạo 1 tập tin: `# touch <ten_tap_tin>`
+
 - Tạo 1 tập tin dạng text: `# echo "" >> ~/<ten_tap_tin>`
+
 - Xóa tập tin: `# rm`
 	+ `# rm <ten_tap_tin>`: Xóa 1 tập tin
 	+ `# rm <tap_tin_1> <tap_tin_2>`: Xóa nhiều tập tin
@@ -16,11 +23,14 @@
 	+ `# rm -i`: Xóa có xác nhận lại
 	+ `# rm -f`: Xóa không xác nhận
 	+ `# rm -I <ten_thu_muc>/file*`: Xóa hàng loạt file có cấu trúc file[...]
+
 - Xóa thư mục: `# rmdir`
 	+ `# rmdir <ten_thu_muc>`: hoặc `# rm -d`: Xóa 1 thư mục rỗng
 	+ `# rm -r <ten_thu_muc>`: Xóa thư mục chứa các thư mục con và tập tin (có xác nhận cho từng đối tượng)
 	+ `# rm -rf <ten_thu_muc>`: Xóa thư mục chứa các thư mục con và tập tin (không xác nhận)
+
 - Mở tập tin: `# cat <tap_tin>` hoặc `# tail <tap_tin>`
+
 - Khởi động trình soạn thảo VI:
 	+ Câu lệnh `# vi <ten_file>`
 	+ Nếu file chưa tồn tại thì hệ thống sẽ tạo ra file đó
@@ -29,6 +39,7 @@
 	+ Nhập `:wq` (Để lưu lại file sửa đổi) hoặc `:q!` (Để thoát mà không lưu)
 	+ Nhập `: <so_dong>`: Để chuyển đến dòng muốn tới
 	+ Nhập `/ <tu_muon_tim_kiem>`: Để tìm kiếm trong file file đó
+
 - Copy file: `# cp`
 	+ Copy file A thành file B tại thư mục hiện hành
 	```sh
@@ -36,35 +47,39 @@
 	```
 	+ Copy nhiều file vào 1 thư mục khác. Ví dụ: Copy file A.txt, B.txt, C.txt, D.exe, E.exe vào thư mục tu vừa tạo
 	```sh
-	mkdir tu
+	mkdir huy
 	touch ./{A,B,C}.txt
 	touch ./{D,E}.exe
-	cp A.txt B.txt C.txt D.exe E.exe tu/
+	cp A.txt B.txt C.txt D.exe E.exe huy/
 	```
 	+ Copy file từ thư mục này sang thư mục khác. Ví dụ: Copy file A.txt từ thư mục tu sang thư mục B
 	```sh
 	mkdir B
-	cp /tu/A.txt B
+	cp /huy/A.txt B
 	```
 	+ Để xem thông tin copy ta thêm `-v`. Ví dụ
 	```sh
-	cp -v A.txt B.txt C.txt D.exe E.exe tu/
-	"A.txt" -> "tu/A.txt"
-	"B.txt" -> "tu/B.txt"
-	"C.txt" -> "tu/C.txt"
-	"D.exe" -> "tu/D.exe"
-	"E.exe" -> "tu/E.exe"
+	cp -v A.txt B.txt C.txt D.exe E.exe huy/
+	"A.txt" -> "huy/A.txt"
+	"B.txt" -> "huy/B.txt"
+	"C.txt" -> "huy/C.txt"
+	"D.exe" -> "huy/D.exe"
+	"E.exe" -> "huy/E.exe"
 	```
 	+ Để giữ nguyên thuộc tính file khi copy ta thêm `-p`. Các thuộc tính giữ nguyên là: access time, modification date, user ID, group ID, file flag, file mode, access control lists
 	```sh
-	cp -p /tu/A.txt B
+	cp -p /huy/A.txt B
 	```
 - Copy thư mục: tương tự file. Ta thêm `-a` hoặc `-r` 
 	+ `-r`: Copy toàn bộ thư mục hoặc file con của thư mục được copy
+	
 	+ `-a`: Bao gồm option `-r` và thực hiện duy trì các thuộc tính của file hoặc folder như file mode, ownership, timestamps...
+
 - Copy không cho ghi đè: thêm `-n`
+
 - Copy cho ghi đè không cần xác định `-f`
+
 - So sánh 2 tệp tin hoặc 2 thư mục `diff`
-```sh
-diff -c a.txt b.txt
-```
+	```sh
+		diff -c a.txt b.txt
+	```

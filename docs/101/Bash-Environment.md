@@ -12,24 +12,29 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 # Bash Environment
 
 ## Môi trường Bash
-- Biến môi trường: 
-	+ các thiết lập quy định chức năng chung và vị trí cho các mục đích khác nhau
-	+ cú pháp: 
+
+- Biến môi trường:
+
+	+ Các thiết lập quy định chức năng chung và vị trí cho các mục đích khác nhau
+
+	+ Cú pháp: 
 	   ```sh
 	   VARIABLE=path,command,alias
 	     (BIẾN=đường dẫn,lệnh,bí danh)
 	     ```
-	Ví dụ: 
+	+ Ví dụ: 
 		```sh
 		CWD=/home/user/Documents
 		```
 
 ## Bash Funcition(Hàm)
+
 - Người dùng có thể tạo các hàm tùy chỉnh của riêng mình trong Bash
+
 - Ví dụ:
 	```sh
 		 function hello()
-			{
+		{
 			echo "Hello World!"
 		 	}
 		 ```
@@ -69,8 +74,8 @@ hoặc cho phép so khớp sẽ không được mở rộng.
 `+ Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi.
 	Ví dụ:
 
-	+ `echo "$PATH"` sẽ in ra `$PATH` trên màn hình
+			`echo "$PATH"` sẽ in ra `$PATH` trên màn hình
 
 
-+`history` Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
++ `history` Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
 đã được thực thi trước đó

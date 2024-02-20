@@ -1,6 +1,6 @@
 # YUM
 
-Mô tả về Yum:
+1. Mô tả về Yum:
 
 - Xử lý các RPM package dependencies
 
@@ -9,7 +9,7 @@ Mô tả về Yum:
 - Được sử dụng cho các hệ điều hành: Red Hat Enterprise(RHEL), CentOS, Scientific Linux 
 và các phiên bản cũ của Fedora
 
-## Yum setup
+2. Yum setup
 
 - Các tùy chọn cấu hình được thiết đặt trong file `/etc/yum.conf`
 
@@ -17,25 +17,25 @@ và các phiên bản cũ của Fedora
 
 - Các bộ đệm( caches) lưu Thông tin kho lưu trữ được cập nhật mới nhất trong `/var/cache/yum`
 
-## Các công cụ quản lý RPM khác
+3. Các công cụ quản lý RPM khác
 
-### Zypper
+- ZYPPER
 
-+ Được sử dụng cho SUSE Linux distributions
+	+ Được sử dụng cho SUSE Linux distributions
 
-+ Vd: 
+	+ Vd: 
 
-		`zipper repos`
+			`zipper repos`
 
-		`zipper install vim`
+			`zipper install vim`
 
-### DNF - Dndified yum
+- DNF (DNDIFIED YUM)
 
-+ Được sử dụng trong HĐH Linux Fedora distributions
+	+ Được sử dụng trong HĐH Linux Fedora distributions
 
-+ Tương lai sẽ thay thế yum trong Red Hat EnterPrise Linux
+	+ Tương lai sẽ thay thế yum trong Red Hat EnterPrise Linux
 
-+ Cú pháp câu lệnh sử dụng giống như Yum
+	+ Cú pháp câu lệnh sử dụng giống như Yum
 
 ## Các câu lệnh YUM
 

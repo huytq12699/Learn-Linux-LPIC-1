@@ -1,4 +1,4 @@
-# Trang hướng dẫn(man page) trong Linux
+# Trang hướng dẫn(Man page) trong Linux
 
 - Cung cấp trang hướng dẫn tích hợp sẵn cho các lệnh, files cấu hình và các tác vụ 
 quản trị hệ thống
@@ -23,7 +23,7 @@ quản trị hệ thống
 	+ Phần 7: các mục và quy ước đa dạng(miscellaneous items and conventions)
 		ví dụ như man(7), regex(7)
 
-	+ Phần 8: các lênh quản trị hệ thống(system administrator commands) - thường chỉ dành cho `root`
+	+ Phần 8: các lệnh quản trị hệ thống(system administrator commands) - thường chỉ dành cho `root`
 
 	+ Phần 9: các thủ tục kernel(không chuẩn)
 

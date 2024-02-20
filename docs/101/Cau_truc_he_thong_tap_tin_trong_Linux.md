@@ -1,4 +1,4 @@
-# File hệ thống
+# Cấu trúc hệ thống tập tin trong Linux
 
 - Hệ thống tập tin của Linux được tổ chức theo 1 hệ thống phân bậc tương tự cấu trúc của 1 cây phân cấp. 
 Bậc cao nhất là thư mục gốc, ký hiệu là "/" (root directory)
@@ -40,6 +40,7 @@ Bậc cao nhất là thư mục gốc, ký hiệu là "/" (root directory)
 
 - `/var`
 	+ Thư mục chứa các tập tin ghi các số liệu biến đổi
+	
 	+ Bao gồm: Hệ thống tập tin log `/var/log`, các gói và các file dữ liệu `/var/lib`, email `/var/mail`, print queues `/var/spool`, lock files `/var/lock`, các file tạm thời cần khi reboot `/var/tmp`
 
 - `/media` - Removable Media Devices
@@ -53,13 +54,15 @@ Bậc cao nhất là thư mục gốc, ký hiệu là "/" (root directory)
 - Hệ thống linux gốc 'ext3', 'ext4', 'btrfs', 'xfs'. Trước khi sử dụng 1 hệ thống tập tin, phải gắn nó vào cây hệ thống tại `mountpoint`. Nên gắn vào thư mục trống.
 
 - `mount`: Sử dụng để gắn vào cây tập tin
+
 ```sh
-mount /dev/sd5a /mnt
+	mount /dev/sd5a /mnt
 ```
 
 > Đính kèm hệ thống tập tin có trong phân vùng đĩa được liên kết với `dev/sd5a` trên thiết bị vào cây tệp tin tại `/mnt`
 
-- `unmount`: Tác các hệ thống tập tin từ điểm gắn
+- `unmount`: Tag các hệ thống tập tin từ điểm gắn
+
 ```sh
-unmount /mnt
+	unmount /mnt
 ```

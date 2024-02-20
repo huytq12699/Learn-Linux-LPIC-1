@@ -1,18 +1,20 @@
 # RPM (Quản lý package sử dụng RPM)
 
-Gói (package) cài đặt `.rpm` gồm:
-- ứng dụng hoặc tiện ích
+1. Gói (package) cài đặt `.rpm` gồm:
 
-- files cấu hình mặc định
+- Ứng dụng hoặc tiện ích
 
-- các hướng dẫn cách thức và nơi cài đặt các files đi kèm với package
+- Files cấu hình mặc định
 
-- liệt kê các dependencies mà package cần có
+- Các hướng dẫn cách thức và nơi cài đặt các files đi kèm với package
 
-## RPM Database	
-- lưu trữ trong `/var/lib/rpm`
+- Liệt kê các dependencies mà package cần có
 
-- sử dụng lệnh `rpm --rebuilddb` để sửa cơ sở dữ liệu rpm bị hỏng, Dependencies cần cho package đã được cài đặt 
+2. RPM Database
+
+- Lưu trữ trong `/var/lib/rpm`
+
+- Sử dụng lệnh `rpm --rebuilddb` để sửa cơ sở dữ liệu rpm bị hỏng, Dependencies cần cho package đã được cài đặt 
 hoặc được cài đặt với package
 
 - `yum` xử lý cài đặt dependencies cho bạn, `rpm` không xử lý
@@ -34,7 +36,8 @@ hoặc được cài đặt với package
 
 + `rpm -Va` Xác nhận tất cả các packages đã được cài đặt
 
-+ `rpm2cpio` Chuyển đổi một `.rpm` file trong 1 file lưu trữ `cpio`, thường được phối hợp với lệnh `cpio`
++ `rpm2cpio` Chuyển đổi một `.rpm` file trong 1 file lưu trữ cpio, thường được phối hợp với lệnh `cpio`
+
 ```sh
- 	VD: rpm2cpio name.rpm | cpio -idmv
+ 		VD: rpm2cpio name.rpm | cpio -idmv
 ```

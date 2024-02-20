@@ -12,11 +12,13 @@
 
 	+ Ví dụ: `NUMBER=123456`
 
+
      > Việc này sẽ tạo một biến môi trường được gọi là `NUMBER` và gán giá trị số ban đầu là `123456` vào biến đó
 
 - Có thể hiển thị trên dòng lệnh (hoặc sử dụng như một phần của một lệnh hoặc thay thế) bằng cách đặt ký tự `$` trước biến.
 
 	+ Ví dụ: `echo $NUMBER`
+
 
 	 > Sẽ hiển thị giá trị hiện tại của biến `NUMBER` (trong ví dụ trước đó, giá trị này sẽ là 123456)
 
@@ -33,11 +35,12 @@
 
 	+ Ví dụ:  
 
-           + `NUMBER=123 * echo $[NUMBER*2]`
+      + `NUMBER=123 * echo $[NUMBER*2]`
 
-           	 	> Kết quả sẽ trả về giá trị 246
+         > Kết quả sẽ trả về giá trị 246
 
-           + Khi thoát khỏi phiên bash hiện tại và tạo một phiên bash mới, giá trị của biến sẽ không được chuyển sang phiên con mới
+      + Khi thoát khỏi phiên bash hiện tại và tạo một phiên bash mới, giá trị của biến sẽ không được 
+      chuyển sang phiên con mới
 
 3. Source (sử dụng các giá trị từ một file khác)
 
@@ -45,9 +48,9 @@
 
  	+ Ví dụ: file `sourcefile.sh` chứa biến `NUMBER=123`
 
-            • Lấy giá trị biến từ `sourcefile.sh` vào shell hiện tại: `source ./sourcefile.sh`
+      • Lấy giá trị biến từ `sourcefile.sh` vào shell hiện tại: `source ./sourcefile.sh`
 
-            • `echo $NUMBER` từ dấu nhắc lệnh bash sau đó sẽ hiển thị giá trị `123` trong biến
+      • `echo $NUMBER` từ dấu nhắc lệnh bash sau đó sẽ hiển thị giá trị `123` trong biến
 
  - Phím tắt cho việc sourcing
 
@@ -67,11 +70,11 @@
 
 - Cũng cho phép kích hoạt/tắt các tính năng shell khác nhau 
 
-    • Ví dụ: `set –x` 
+   • Ví dụ: `set –x` 
 
 - Sẽ in từng lệnh ra terminal khi được thực thi
 
-    • Ví dụ: `set +x` 
+   • Ví dụ: `set +x` 
 
 - Sẽ tắt (disable) việc in từng lệnh ra terminal  
 

@@ -32,4 +32,10 @@
 
 - `=` Dấu bằng được sử dụng để kiểm tra sự bằng nhau của một câu lệnh.
 
-- `!=` Dấu này biểu thị sự không bằng nhau của 2 câu lệnh
+- `!=` Dấu này biểu thị sự không bằng nhau của 2 câu lệnh.
+
+- `eq` Được sử dụng để kiểm tra sự bằng nhau giữa 2 số
+
+- `ne` được sử dụng để kiểm tra sự khác nhau giữa 2 số.
+
+- `gt` được sử dụng để kiểm tra xem giá trị của một số có lớn hơn giá trị của số khác hay không.

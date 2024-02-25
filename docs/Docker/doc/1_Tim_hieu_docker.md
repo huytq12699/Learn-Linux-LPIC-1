@@ -9,7 +9,7 @@ Docker có 2 phiên bản phổ biến:
 - Docker Enterprise (EE): Phiên bản dành cho các doanh nghiệp, khi sử dụng phiên bản này sẽ nhận được support từ nhà phát hành, ngoài ra còn có thêm tính năng quản lý và bảo mật
 Các thành phần trogn Docker Engine:
 
-![](/docker/image/docker_element.png)
+![](/doc/Docker/image/docker_element.png)
 
 - Docker Daemon: Chạy trên host, đóng vai trò là server, nhận các Restful request từ Docker Client và thực thi nó. Là một lightweight runtime giúp build, run, quản lý các container và các thành phần liên quan khác
 

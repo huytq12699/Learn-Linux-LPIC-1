@@ -1,6 +1,6 @@
 # YUM
 
-1. Mô tả về Yum:
+### Mô tả về Yum:
 
 - Xử lý các RPM package dependencies
 
@@ -9,7 +9,7 @@
 - Được sử dụng cho các hệ điều hành: Red Hat Enterprise(RHEL), CentOS, Scientific Linux 
 và các phiên bản cũ của Fedora
 
-2. Yum setup
+### Yum setup
 
 - Các tùy chọn cấu hình được thiết đặt trong file `/etc/yum.conf`
 
@@ -17,7 +17,7 @@ và các phiên bản cũ của Fedora
 
 - Các bộ đệm( caches) lưu Thông tin kho lưu trữ được cập nhật mới nhất trong `/var/cache/yum`
 
-3. Các công cụ quản lý RPM khác
+### Các công cụ quản lý RPM khác
 
 - ZYPPER
 

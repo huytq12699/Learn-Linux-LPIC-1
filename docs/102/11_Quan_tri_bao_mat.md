@@ -42,19 +42,19 @@
 
 - Định dạng yêu cầu người dùng được liệt kê (hoặc một nhóm nếu toàn bộ nhóm đó phải có đặc quyền root) cùng với các quyền của họ trong Linux  
     
-    + Ví dụ:
++ Ví dụ:
 
     ```sh
     user ALL=(ALL) ALL  
     ```      	
-        + Sẽ cung cấp quyền sudo cho tài khoản người dùng cho tất cả các lệnh được sử dụng với đặc quyền root  
+    + Sẽ cung cấp quyền sudo cho tài khoản người dùng cho tất cả các lệnh được sử dụng với đặc quyền root  
     
-    + Ví dụ:
-    
++ Ví dụ:
+
     ```sh 
     user ALL=(ALL) /bin/systemctl  
     ```        
-        + Sẽ giới hạn người dùng chỉ có thể chạy systemctl với đặc quyền sudo (để có thể khởi động lại các dịch vụ services) 
+    + Sẽ giới hạn người dùng chỉ có thể chạy systemctl với đặc quyền sudo (để có thể khởi động lại các dịch vụ services) 
 
 ### find 
 
@@ -76,12 +76,12 @@
  
 - `-exec [commands] {} ;`: Thực hiện các lệnh đã chỉ định trên các files được tìm thấy 
     
-    + Ví dụ:
++ Ví dụ:
 
     ```sh
     find / -user root -perm 0777 -type f -exec ls -al {} ; | mail -s "Files owned by root with world rwx permissions" root  
     ```    
-        + Lệnh trên sẽ tìm kiếm tất cả các files thuộc sở hữu của người dùng root với tất cả các quyền đọc/ghi/thực thi mà cho phép tất cả các người dùng có thể thực thi, sau đó gửi email danh sách đó với danh sách hiển thị của tất cả các files cho người dùng root với chủ đề (subject) được chỉ định.
+    + Lệnh trên sẽ tìm kiếm tất cả các files thuộc sở hữu của người dùng root với tất cả các quyền đọc/ghi/thực thi mà cho phép tất cả các người dùng có thể thực thi, sau đó gửi email danh sách đó với danh sách hiển thị của tất cả các files cho người dùng root với chủ đề (subject) được chỉ định.
 
 ### Các mục khác có thể được sử dụng để điều tra/bảo mật hệ thống
 

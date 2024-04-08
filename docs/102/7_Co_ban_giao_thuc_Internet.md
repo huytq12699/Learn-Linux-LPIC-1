@@ -68,46 +68,46 @@
 
 - Mỗi mạng đều có một địa chỉ Broadcast, hoạt động trên số địa chỉ là 255.  
    
-   	+ Ví dụ: Mạng 192.168.1.0/24
+- Ví dụ: Mạng 192.168.1.0/24
 
-          	+ 192.168.1.255 là địa chỉ Broadcast
+    + 192.168.1.255 là địa chỉ Broadcast
 
-           	+ Đây là cách mà một mạng IP gửi lưu lượng mà có thể được nhìn thấy bởi tất cả các máy trên mạng.
+    + Đây là cách mà một mạng IP gửi lưu lượng mà có thể được nhìn thấy bởi tất cả các máy trên mạng.
 
 ### Cổng/Dịch vụ phổ biến
 
-• 20/21: FTP
+- 20/21: FTP
 
-• 22: SSH
+- 22: SSH
 
-• 23: Telnet
+- 23: Telnet
 
-• 25: SMTP
+- 25: SMTP
 
-• 53: DNS
+- 53: DNS
 
-• 80: HTTP
+- 80: HTTP
 
-• 110: POP3
+- 110: POP3
 
-• 123: NTP
+- 123: NTP
 
-• 139: NETBIOS
+- 139: NETBIOS
 
-• 143: IMAP
+- 143: IMAP
 
-• 161/162: SNMP
+- 161/162: SNMP
 
-• 389: LDAP 
+- 389: LDAP 
 
-• 443: HTTPS
+- 443: HTTPS
 
-• 465: SMTPS
+- 465: SMTPS
 
-• 514: SYSLOG
+- 514: SYSLOG
 
-• 636: LDAPS
+- 636: LDAPS
 
-• 993: IMAPS 
+- 993: IMAPS 
 
-• 995: POP3S
+- 995: POP3S

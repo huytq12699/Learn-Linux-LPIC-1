@@ -57,7 +57,11 @@ hết các lệnh khác.
 	
 	+ Thay đổi cấu hình giao diện mạng được áp dụng bằng cách khởi động lại dịch vụ mạng 
             
-            + Ví dụ: `service network restart`  
+        + Ví dụ:
+
+        ```sh
+        service network restart  
+        ```
 
 - Debian/Ubuntu
 
@@ -67,7 +71,11 @@ hết các lệnh khác.
     
     + Thay đổi cấu hình giao diện mạng được áp dụng bằng cách khởi động lại dịch vụ networking  
         
-        + Ví dụ: `/etc/init.d/networking restart` 
+        + Ví dụ: 
+
+        ```sh
+        /etc/init.d/networking restart 
+        ```
 
 ### Default gateway(Cổng mặc định)
 
@@ -76,9 +84,9 @@ HOẶC không có một static route định tuyến tĩnh phù hợp khác đư
 
 - Có thể được cấu hình trong `/etc/sysconfig/network` hoặc `/etc/sysconfig/network-scripts/ifcfg-eth0` (trong đó # là số giao diện)  
              
-    + Ví dụ: `GATEWAY=192.168.1.1` 
+- Ví dụ: `GATEWAY=192.168.1.1` 
            
-           + Sẽ cấu hình Default GW của Linux với địa chỉ IP 192.168.1.1 
+    + Sẽ cấu hình Default GW của Linux với địa chỉ IP 192.168.1.1 
 
 ### Route  
 
@@ -88,11 +96,11 @@ HOẶC không có một static route định tuyến tĩnh phù hợp khác đư
  	
  	+ Ví dụ: `route add default gw 192.168.1.1`  
             
-           	+ Sẽ thêm một Default GW vào hệ thống đi đến 192.168.1.1  
+        + Sẽ thêm một Default GW vào hệ thống đi đến 192.168.1.1  
     
     + Ví dụ: `route add 192.168.10.211 lo`
       
-            + Sẽ định tuyến tất cả lưu lượng(traffic) trả về cho loopback adapter (giải pháp nhanh chóng chống lại một cuộc tấn công mạng DoS attack từ một địa chỉ IP duy nhất, trường hợp này IP là: 192.168.10.211)
+        + Sẽ định tuyến tất cả lưu lượng(traffic) trả về cho loopback adapter (giải pháp nhanh chóng chống lại một cuộc tấn công mạng DoS attack từ một địa chỉ IP duy nhất, trường hợp này IP là: 192.168.10.211)
 
 - `add`: Thêm một gateway/route/destination 
 
@@ -108,11 +116,14 @@ HOẶC không có một static route định tuyến tĩnh phù hợp khác đư
    
 - Có 2 phương pháp để kích hoạt: 
  
-      + pp1: `echo 1 > /proc/sys/net/ipv4/ip_forward` 
-      
-      + pp2: sửa `/etc/sysctl.conf` và thêm `net.ipv4.ip_forward=1`  
+    + pp1: 
+
+    ```sh
+    echo 1 > /proc/sys/net/ipv4/ip_forward 
+    ```  
+    + pp2: sửa `/etc/sysctl.conf` và thêm `net.ipv4.ip_forward=1`  
         
-        	+ Lưu ý: Phương pháp 1 không phải là vĩnh viễn nhưng sẽ có hiệu lực ngay lập tức, phương pháp 2 yêu cầu khởi động lại (hoặc kết hợp với phương pháp một) 
+    + Lưu ý: Phương pháp 1 không phải là vĩnh viễn nhưng sẽ có hiệu lực ngay lập tức, phương pháp 2 yêu cầu khởi động lại (hoặc kết hợp với phương pháp một) 
 
 ### Gia hạn địa chỉ DHCP lease
 

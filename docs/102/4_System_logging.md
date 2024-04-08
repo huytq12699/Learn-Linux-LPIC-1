@@ -2,11 +2,11 @@
 
 ### syslog (có thể là rsyslog, klogd)  
 
-• Giao thức đơn giản để ghi nhật ký(log) thông điệp hệ thống
+- Giao thức đơn giản để ghi nhật ký(log) thông điệp hệ thống
 
-• Các ứng dụng có thể truy cập vào syslog thông qua lệnh thư viện syslog hoặc qua tiện ích dòng lệnh logger  
+- Các ứng dụng có thể truy cập vào syslog thông qua lệnh thư viện syslog hoặc qua tiện ích dòng lệnh logger  
 
-• Daemon (syslogd) sẽ xử lý các thông điệp, các cấp độ ghi nhật ký có thể là:        
+- Daemon (syslogd) sẽ xử lý các thông điệp, các cấp độ ghi nhật ký có thể là:        
    
    + 0: Khẩn cấp (Emergency) 
    
@@ -36,7 +36,7 @@
 
 ### "facilities" ghi nhật ký
 
-• Ghi nhật ký cụ thể được liên kết với các mục khác nhau (mô tả những gì được ghi nhật ký)  
++ Ghi nhật ký cụ thể được liên kết với các mục khác nhau (mô tả những gì được ghi nhật ký)  
    
    - `kern`: Các thông điệp kernel (Kernel messages) 
    
@@ -96,7 +96,7 @@
 
 ### journalctl
 
-• Lệnh được sử dụng để xem file nhật ký journal đã đề cập trên console: 
+- Lệnh được sử dụng để xem file nhật ký journal đã đề cập trên console: 
    
    +  `-f`: Cho phép bạn theo dõi khi có các thông điệp nhật ký mới được ghi  
    
@@ -118,15 +118,15 @@
 
 ### Log rotation(xoay vòng nhật ký)
 
-• Định kỳ sao lưu, nén và/hoặc xóa các files nhật ký đáp ứng tiêu chí nhất định để quản lý không gian đĩa và hiệu suất I/O.  
+- Định kỳ sao lưu, nén và/hoặc xóa các files nhật ký đáp ứng tiêu chí nhất định để quản lý không gian đĩa và hiệu suất I/O.  
 
-• /etc/logrotate.conf (và bất kỳ thứ gì trong /etc/logrotate.d)  
+- /etc/logrotate.conf (và bất kỳ thứ gì trong /etc/logrotate.d)  
 
-• Cấu hình chính cho việc xoay vòng nhật ký (cài đặt mặc định và file hệ thống để xoay  vòng)  
+- Cấu hình chính cho việc xoay vòng nhật ký (cài đặt mặc định và file hệ thống để xoay  vòng)  
 
-• Mỗi file trong logrotate.d thêm hoặc ghi đè các thiết lập lên cài đặt mặc định trong file cấu hình
+- Mỗi file trong logrotate.d thêm hoặc ghi đè các thiết lập lên cài đặt mặc định trong file cấu hình
 
-• Các files đang mở trong quá trình xoay vòng nhật ký được xử lý theo một trong 3 cách:  
+- Các files đang mở trong quá trình xoay vòng nhật ký được xử lý theo một trong 3 cách:  
 
    + Di chuyển nhật ký, tạo tín hiệu đóng file và mở lại nhật ký; không phải ứng dụng nào cũng hỗ trợ phương pháp này  
    

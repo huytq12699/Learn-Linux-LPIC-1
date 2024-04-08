@@ -24,7 +24,8 @@
          yum install rngd-tools
 
          rngd -r /dev/urandom 
-        ```
+    ```
+    
 - `-a`: Tạo public key dạng văn bản để cung cấp
 
 - `-o [filename]`: file đầu ra

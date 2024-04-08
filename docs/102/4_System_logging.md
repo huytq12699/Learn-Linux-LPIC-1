@@ -28,11 +28,11 @@
 
 ### rsyslog  
  
-• Phiên bản "nhanh" thay thế của syslog
+- Phiên bản "nhanh" thay thế của syslog
 
 ### syslog-ng
 
-• Phiên bản "thế hệ tiếp theo" thay thế của syslog
+- Phiên bản "thế hệ tiếp theo" thay thế của syslog
 
 ### "facilities" ghi nhật ký
 
@@ -60,39 +60,39 @@
 
 ### /var/log/message
 
-• Nơi chứa tất cả các thông điệp nhật ký (trừ mail)
+- Nơi chứa tất cả các thông điệp nhật ký (trừ mail)
 
 ### /var/log/maillog
 
-• Các thông điệp emails được ghi vào đây
+- Các thông điệp emails được ghi vào đây
 
 ### logger
 
-• Cho phép bạn sử dụng một lệnh ghi một thông điệp vào /var/log/messages  
+- Cho phép bạn sử dụng một lệnh ghi một thông điệp vào /var/log/messages  
 
-• Nhấn CTL+D để kết thúc và ghi tin nhắn  
+- Nhấn CTL+D để kết thúc và ghi tin nhắn  
 
-• -i: Chuyển thông tin bổ sung đến syslog 
+- -i: Chuyển thông tin bổ sung đến syslog 
 
 ### /etc/syslog.conf
 
-• file cấu hình syslog  
+- file cấu hình syslog  
 
-• Xác định nơi các facilities cụ thể sẽ ghi nhật ký
+- Xác định nơi các facilities cụ thể sẽ ghi nhật ký
 
 ### systemd
 
-• Sử dụng hệ thống ghi nhật ký riêng gọi là journal (với journald là daemon cho nó)  
+- Sử dụng hệ thống ghi nhật ký riêng gọi là journal (với journald là daemon cho nó)  
 
-• Được áp dụng trên hầu hết các bản phân phối Linux dựa trên systemd hiện đại 
+- Được áp dụng trên hầu hết các bản phân phối Linux dựa trên systemd hiện đại 
 
-• Chủ yếu, khác biệt nằm ở việc ghi nhật ký được thực hiện vào một file nhị phân chứ  không phải file văn bản thuần túy, cho phép bạn truy vấn dữ liệu siêu dữ liệu, chi tiết dòng lệnh, PIDs, các files nhị phân và đặc quyền bảo mật (một số trong số đó không có sẵn trong file văn bản thuần)  
+- Chủ yếu, khác biệt nằm ở việc ghi nhật ký được thực hiện vào một file nhị phân chứ  không phải file văn bản thuần túy, cho phép bạn truy vấn dữ liệu siêu dữ liệu, chi tiết dòng lệnh, PIDs, các files nhị phân và đặc quyền bảo mật (một số trong số đó không có sẵn trong file văn bản thuần)  
 
-• Bới vì nó là một phần của hệ thống quản lý dịch vụ trong Linux, tất cả các thông điệp của daemon được tự động ghi nhật ký thay vì syslog phiên bản sysvinit trong đó mỗi dịch vụ chịu trách nhiệm về cách và những thông điệp nào được ghi vào nhật ký
+- Bới vì nó là một phần của hệ thống quản lý dịch vụ trong Linux, tất cả các thông điệp của daemon được tự động ghi nhật ký thay vì syslog phiên bản sysvinit trong đó mỗi dịch vụ chịu trách nhiệm về cách và những thông điệp nào được ghi vào nhật ký
 
 ### /var/log/journal  
 
-• file nơi lưu trữ thông tin ghi nhật ký của systemd
+- file nơi lưu trữ thông tin ghi nhật ký của systemd
 
 ### journalctl
 
@@ -112,9 +112,9 @@
 
 ### /etc/systemd/journald.conf  
 
-• File cấu hình cho journald
+- File cấu hình cho journald
 
-• Các thiết lập thông thường cho kích thước nhật ký và xem xét việc chuyển tiếp ghi nhật ký đến syslog cũng như tương đương đã được cài đặt.
+- Các thiết lập thông thường cho kích thước nhật ký và xem xét việc chuyển tiếp ghi nhật ký đến syslog cũng như tương đương đã được cài đặt.
 
 ### Log rotation(xoay vòng nhật ký)
 

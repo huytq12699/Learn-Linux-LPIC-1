@@ -11,7 +11,7 @@
 - `/etc/inetd.conf`: File cấu hình chính chứa một dòng duy nhất cho mỗi kiểm soát dịch vụ 
 
 - Ví dụ:
- 
+
 ```sh
 telnet stream tcp nowait root /usr/sbin/in.telnetd in.telnetd
 ```  
@@ -82,11 +82,11 @@ service telnet
 	
 	+ Từ chối mặc định: Từ chối tất cả các máy truy cập đến tất cả các dịch vụ (ALL:ALL)  
        	
-       		+ Sử dụng như một phần dự phòng trong `hosts.deny` vì các kết quả khớp trong `hosts.allow` sẽ ghi đè lên.  
+       	+ Sử dụng như một phần dự phòng trong `hosts.deny` vì các kết quả khớp trong `hosts.allow` sẽ ghi đè lên.  
     
     + Cho phép mặc định: Tự động tin tưởng tất cả mọi người và cung cấp quyền truy cập đến tất cả mọi thứ  
         	
-        	+ Mối nguy hiểm về mặt bảo mật rõ ràng  
+        + Mối nguy hiểm về mặt bảo mật rõ ràng  
     
     + Kết hợp: Cho phép và từ chối theo cách lựa chọn 
 
@@ -94,7 +94,7 @@ service telnet
 
 - `hosts.allow` được đọc trước, nếu khớp với các dòng cấu hình trong file thì được cho phép và `hosts.deny` được bỏ qua (hoàn toàn).  
 
-		+ Thay đổi trong `hosts.allow/deny` có hiệu lực ngay sau khi thay đổi file.  
+	+ Thay đổi trong `hosts.allow/deny` có hiệu lực ngay sau khi thay đổi file.  
 
 - Đọc tuần tự: Có nhiều mục nhập cho cùng một dịch vụ sẽ chỉ áp dụng mục nhập đầu tiên.    
 
@@ -102,7 +102,8 @@ service telnet
 
 - Có thể thêm các tùy chọn khác thay vì chỉ từ chối dịch vụ.  
       
-      	+ Ví dụ: 
+    + Ví dụ:
+     
       	```sh
       	in.telnetd: 10.1.10.0/24 : twist /bin/echo "Service 404 - Service Not Found"  
       	```

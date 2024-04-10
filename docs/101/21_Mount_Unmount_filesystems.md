@@ -67,13 +67,13 @@
 
 - Nội dung của các cột là:
 
-	+ 1. Thiết bị (ví dụ: /dev/sda1 HOẶC LABEL=data HOẶC UUID=44d27f92d3df-4207-80ea-22830afccf03) 
+	+ Cột 1. Thiết bị (ví dụ: /dev/sda1 HOẶC LABEL=data HOẶC UUID=44d27f92d3df-4207-80ea-22830afccf03) 
 	
-	+ 2. Điểm gắn mount (ví dụ: / HOẶC /mnt/data, v.v.) 
+	+ Cột 2. Điểm gắn mount (ví dụ: / HOẶC /mnt/data, v.v.) 
 	
-	+ 3. `Filesystem`: loại filesystem được hỗ trợ (ví dụ: ext3 HOẶC xfs, v.v.)
+	+ Cột 3. `Filesystem`: loại filesystem được hỗ trợ (ví dụ: ext3 HOẶC xfs, v.v.)
 
-	+ 4. `Tùy chọn`: danh sách phân tách bằng dấu phẩy  
+	+ Cột 4. `Tùy chọn`: danh sách phân tách bằng dấu phẩy  
     
 		+ `noauto`: không tự động gắn mount khi khởi động (ngăn không cho các thiết bị ổ đĩa(External HDD) cắm ngoài được mount khi boot, do có thể gây ra vấn đề truy cập khi khởi động)
 
@@ -85,9 +85,9 @@
 		
 		+ `ro`: gắn mount chỉ cho phép đọc
 
-	+ 5. `dump`: giá trị '0' sẽ ngăn lệnh 'dump' ảnh hưởng đến ổ đĩa 
+	+ Cột 5. `dump`: giá trị '0' sẽ ngăn lệnh 'dump' ảnh hưởng đến ổ đĩa 
 	
-	+ 6. `fsck`: giá trị '1' sẽ cho biết filesystem cần được kiểm tra đầu tiên  
+	+ Cột 6. `fsck`: giá trị '1' sẽ cho biết filesystem cần được kiểm tra đầu tiên  
           
 - Lưu ý: `/etc/fstab` được sử dụng cho TẤT CẢ các loại mounts, cả mount local và từ xa.
 

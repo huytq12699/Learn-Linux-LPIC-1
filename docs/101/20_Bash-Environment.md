@@ -30,7 +30,7 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 		CWD=/home/user/Documents
 		```
 
-## Bash Funcition(Hàm)
+## Bash Function(Hàm)
 
 - Người dùng có thể tạo các hàm tùy chỉnh của riêng mình trong Bash
 

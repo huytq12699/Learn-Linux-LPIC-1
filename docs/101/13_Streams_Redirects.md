@@ -114,7 +114,7 @@
 
 6. `tee` 
 
-- Đọc dữ liệu từ stdin và viết dữ liệu đó ra stdout và các files. Lệnh này hữu ích để kết nối các lệnh dài với nhau và xem đầu ra ở các giai đoạn khác nhau.
+- Đọc dữ liệu từ stdin, viết dữ liệu đó ra stdout và các files. Lệnh này hữu ích để kết nối các lệnh dài với nhau và xem đầu ra ở các giai đoạn khác nhau.
 
 - Thường được sử dụng khi bạn muốn thu thập đầu ra của một ứng dụng nhưng cũng cần nhìn thấy kết quả trên màn hình. 
 
@@ -123,12 +123,11 @@
 	```sh
  	find / -name "*.sh" | tee visibleresults.txt
  	``` 
-	+ Sẽ tìm tất cả các file có đuôi mở rộng `*.sh` từ phân vùng gốc(root partition), đẩy kết quả đó như một luồng đầu vào cho tee, sau đó mở hai luồng đầu ra tiêu chuẩn, gửi một luồng đến console và một luồng đến file được chỉ định `visibleresults.txt`
+	+ Sẽ tìm tất cả các file có đuôi mở rộng `*.sh` từ phân vùng gốc(root partition), đẩy kết quả đó như một luồng đầu vào cho `tee`, sau đó mở hai luồng đầu ra tiêu chuẩn, gửi một luồng đến console và một luồng đến file được chỉ định `visibleresults.txt`
 
 7. `xargs` 
 
-- Nhận đầu vào từ stdin và các lệnh khác. Thông thường được sử dụng với lệnh `find` nhưng cũng có thể sử dụng với các lệnh khác sau đó đẩy  
-chúng vào một lệnh khác theo yêu cầu 
+- Nhận đầu vào từ stdin và các lệnh khác. Thông thường được sử dụng với lệnh `find` nhưng cũng có thể sử dụng với các lệnh khác sau đó đẩy chúng vào một lệnh khác theo yêu cầu. 
 
 - Ví dụ
 

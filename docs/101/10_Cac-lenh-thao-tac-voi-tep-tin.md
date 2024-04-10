@@ -1,5 +1,7 @@
 # Các lệnh thao tác với tập tin
 
+## Lệnh cơ bản
+
 - `# ls`: Xem danh sách các file và thư mục hiện hành
 
 - `# ll`: Xem danh sách các file và thư mục hiện hành chi tiết
@@ -22,23 +24,7 @@
 
 - Mở tập tin: `# cat <tap_tin>` hoặc `# tail <tap_tin>`
 
-## Trình soạn thảo VI:
-
-+ Câu lệnh: `# vi <ten_file>`. Nếu file chưa tồn tại thì hệ thống sẽ tạo ra file đó.
-
-+ Nhấn phía `i` (Insert): Để chỉnh sửa văn bản
-
-+ Nhấn phím `ESC` để thoát khoải trạng thái nhập
-
-+ Nhập `:wq`: Thoát và lưu lại file sửa đổi 
-
-+ Nhập `:q!`: Để thoát mà không lưu
-
-+ Nhập `: <so_dong>`: Để chuyển đến dòng muốn tới.
-
-+ Nhập `/ <tu_muon_tim_kiem>`: Để tìm kiếm từ trong file file đó.
-
-## Các lệnh xóa
+## Lệnh xóa
 
 - Xóa tập tin: `# rm`
 
@@ -92,7 +78,7 @@
 	mkdir B
 	cp /huy/A.txt B
 	```
-4. Để xem thông tin copy ta thêm `-v`. 
+4. Xem thông tin copy, thêm `-v`. 
 
 	Ví dụ:
 
@@ -104,23 +90,24 @@
 	"D.exe" -> "huy/D.exe"
 	"E.exe" -> "huy/E.exe"
 	```
-- Để giữ nguyên thuộc tính file khi copy ta thêm `-p`. Các thuộc tính giữ nguyên là: access time, modification date, user ID, group ID, file flag, file mode, access control lists
+5. Giữ nguyên thuộc tính file khi copy, thêm `-p`. 
+Các thuộc tính giữ nguyên là: access time, modification date, user ID, group ID, file flag, file mode, access control lists.
 
 	```sh
 	cp -p /huy/A.txt B
 	```
 
-5. Copy thư mục: tương tự file. Ta thêm `-a` hoặc `-r`
+6. Copy thư mục: tương tự file. Ta thêm `-a` hoặc `-r`
 
 	+ `-r`: Copy toàn bộ thư mục hoặc file con của thư mục được copy
 
 	+ `-a`: Bao gồm option `-r` và thực hiện duy trì các thuộc tính của file hoặc folder như file mode, ownership, timestamps...
 
-6. Copy không cho ghi đè: `-n`
+7. Copy không cho ghi đè: `-n`
 
-7. Copy cho ghi đè không cần xác định: `-f`
+8. Copy cho ghi đè không cần xác định: `-f`
 
-8. So sánh 2 tệp tin hoặc 2 thư mục: `diff`
+9. So sánh 2 tệp tin hoặc 2 thư mục: `diff`
 
 	```sh
 	diff -c a.txt b.txt

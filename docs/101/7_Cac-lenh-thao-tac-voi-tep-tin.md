@@ -70,6 +70,7 @@
 	touch ./{D,E}.exe
 	cp A.txt B.txt C.txt D.exe E.exe huy/
 	```
+
 3. Copy file từ thư mục này sang thư mục khác. 
 
 	Ví dụ: Copy file `A.txt` từ thư mục `huy` sang thư mục B
@@ -78,6 +79,7 @@
 	mkdir B
 	cp /huy/A.txt B
 	```
+
 4. Xem thông tin copy, thêm `-v`. 
 
 	Ví dụ:
@@ -97,7 +99,7 @@ Các thuộc tính giữ nguyên là: access time, modification date, user ID, g
 	cp -p /huy/A.txt B
 	```
 
-6. Copy thư mục: tương tự file. Ta thêm `-a` hoặc `-r`
+6. Copy thư mục: thêm `-a` hoặc `-r`
 
 	+ `-r`: Copy toàn bộ thư mục hoặc file con của thư mục được copy
 

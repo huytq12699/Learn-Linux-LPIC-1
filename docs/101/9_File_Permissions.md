@@ -1,17 +1,16 @@
-# File Permissions
+# File_Permissions
 
-- Trong Linux mọi tệp đều liên kết với người dùng là chủ sở hữu. Mỗi tệp cũng được liên kết với 1 nhóm có 
-liên quan đến tệp và các quyền hoặc quyền nhất định: đọc, viết, thực thi...
+- Trong Linux mọi tệp đều liên kết với người dùng là chủ sở hữu. Mỗi tệp cũng được liên kết với 1 nhóm có liên quan đến tệp và các quyền 
+hoặc quyền nhất định: đọc, viết, thực thi...
 
-- Các tệp có 3 loại quyền: đọc(r), ghi(w), thực thi(x). 3 quyền này được đại diện theo thứ tự: Người dùng (User), 
-Nhóm (group), Người dùng khác (other user).
+- Các tệp có 3 loại quyền: đọc(r), ghi(w), thực thi(x). 3 quyền này được đại diện theo thứ tự: Người dùng(user), Nhóm(group), Người dùng khác(other user).
 
 |rwx: |rwx: |rwx:|
 |---|---|---|
 |u: |g:|o:|
 
 
-# Giải thích ý nghĩa
+## Một số lệnh cơ bản
 
 - `rwx`: Là quyền của User. Ở đây User có đầy đủ 3 quyền là read (đọc), write (ghi) và excute (thực thi)
 
@@ -29,17 +28,19 @@ Nhóm (group), Người dùng khác (other user).
 
 - `chgrp` : Thay đổi quyền sở hữu nhóm(group) của một file hoặc thư mục
 
-### Thay đổi quyền của file và folder
+## Thay đổi quyền của file và folder
 
 ```sh
-chmod [options] [mode] file1 file2 file3 ...
-```
-- Các options: 
-	+ `-R`: Recursive, áp dụng cho tất cả các file và folder bên trong
+	chmod [options] [mode] file1 file2 file3 ...
+	```
 
-	+ `-f`: force, thay đổi quyền trong cả trường hợp xảy ra lỗi
+- Các options:
 
-	+ `-v`: verbose, hiển thị đối tượng đã xử lý
+	+ `-R`: Recursive, áp dụng cho tất cả các file và folder bên trong.
+
+	+ `-f`: force, thay đổi quyền trong cả trường hợp xảy ra lỗi.
+
+	+ `-v`: verbose, hiển thị đối tượng đã xử lý.
 
 - Các mode:
 
@@ -53,6 +54,3 @@ chmod [options] [mode] file1 file2 file3 ...
 |2|write (2^1) only|-w-|
 |1|execute (2^0) only|--x|
 |0|none|---|
-
-
-

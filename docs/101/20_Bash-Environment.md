@@ -37,7 +37,7 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 - Ví dụ:
 
 	```sh
-		 function hello()
+		function hello()
 		{
 			echo "Hello World!"
 		 	}
@@ -63,23 +63,36 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 
 + `type` Được sử dụng để xác định kiểu của một đối tượng như là một hàm, file bí danh, tích hợp sẵn hoặc từ khóa. 
 
-	Ví dụ: 
-			`type type` sẽ hiển thị loại của lệnh "type"
+	+ Ví dụ:
 
+	```sh 
+		type type
+		```
+	+ Lệnh trên sẽ hiển thị loại của lệnh "type"
 
 + `Trích dẫn 'yếu' hay dấu ngoặc kép`: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn 
 hoặc cho phép so khớp sẽ không được mở rộng. 
 	
-	Ví dụ:
+	+ Ví dụ:
 
-	+ `echo "$PATH"`, hiển thị lên giá trị của biến `PATH`
+	```sh
+		echo "$PATH"
+		```
+	+ Lệnh trên hiển thị lên giá trị của biến `PATH`
 
- 	+ `ls"*"` sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là '*
+	```sh
+ 		ls"*"
+ 		```
+ 	+ Lệnh trên sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là `*`
 
 + `Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi.
 	
-	Ví dụ:
-			`echo "$PATH"` sẽ in ra `$PATH` trên màn hình
+	+ Ví dụ:
+
+	```sh
+			echo "$PATH"
+			```
+	+ Lệnh trên sẽ in ra `$PATH` trên màn hình
 
 + `history`: Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
 đã được thực thi trước đó

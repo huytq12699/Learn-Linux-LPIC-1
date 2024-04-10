@@ -14,8 +14,7 @@
 
 - Lưu trữ trong `/var/lib/rpm`
 
-- Sử dụng lệnh `rpm --rebuilddb` để sửa cơ sở dữ liệu rpm bị hỏng, Dependencies cần cho package đã được cài đặt 
-hoặc được cài đặt với package
+- Sử dụng lệnh `rpm --rebuilddb` để sửa cơ sở dữ liệu rpm bị hỏng, Dependencies cần cho package đã được cài đặt hoặc được cài đặt với package
 
 - `yum` xử lý cài đặt dependencies cho bạn, `rpm` không xử lý
 
@@ -27,8 +26,7 @@ hoặc được cài đặt với package
 
 + `rpm -qa` Hiển thị tất cả các packages đã được cài đặt trong hệ điều hành
 
-+ `rpm -i` Cài đặt một package cụ thể, thường được kết hợp với các tùy chọn khác 
-để cung cấp thêm thông tin đầu ra về quá trình cài đặt. VD: rpm -ivh
++ `rpm -i` Cài đặt một package cụ thể, thường được kết hợp với các tùy chọn khácđể cung cấp thêm thông tin đầu ra về quá trình cài đặt. VD: rpm -ivh
 
 + `rpm -U` Nâng cấp một package đã cài đặt lên phiên bản mới nhất
 
@@ -38,6 +36,6 @@ hoặc được cài đặt với package
 
 + `rpm2cpio` Chuyển đổi một `.rpm` file trong 1 file lưu trữ cpio, thường được phối hợp với lệnh `cpio`
 
-```sh
+	```sh
  		VD: rpm2cpio name.rpm | cpio -idmv
-```
+	```

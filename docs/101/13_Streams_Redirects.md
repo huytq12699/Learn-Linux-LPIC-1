@@ -42,7 +42,7 @@
 
 - `|`: đường ống, để gửi đầu ra lệnh đến lệnh khác  
 
-+ Ví dụ 
+	+ Ví dụ 
 
 	```sh
 	cat /var/log/messages | more  
@@ -50,7 +50,7 @@
 
 - `>`: chuyển hướng đầu ra tiêu chuẩn đến một file hoặc thiết bị (tạo hoặc ghi đè đích nếu là một file)  
 
-+ Ví dụ:
+	+ Ví dụ:
 
 	```sh
 	find /user -name *.sh > output.txt
@@ -58,7 +58,7 @@
 
 - `>>`: chuyển hướng đầu ra tiêu chuẩn đến một file hoặc thiết bị (nối thêm vào đích nếu là một file)  
 
-+ Ví dụ
+	+ Ví dụ
 
 	```sh
 	find /user -name "*.txt" >> output.txt  
@@ -66,19 +66,19 @@
 
 - `<`: chuyển hướng đầu vào tiêu chuẩn đến một chương trình  
 
-+ Ví dụ
+	+ Ví dụ
 
 	```sh
 	sort < /home/user/listfile.txt 
 	```
 
-3.  • Chuyển hướng luồng lỗi (Redirecting standard error)  
+3. Chuyển hướng luồng lỗi (Redirecting standard error)  
 
 - Thông thường, stderr được chuyển hướng đến một file (ghi nhật ký log) hoặc một thiết bị đặc biệt gọi là /dev/null 
 
 - Việc này cho phép bạn xóa các lỗi từ đầu ra tiêu chuẩn bình thường 
 
-+ Ví dụ 
+	+ Ví dụ 
 	
 	```sh
 	find / -iname "*.sh" 2> /dev/null
@@ -87,14 +87,14 @@
 
 4. Kết hợp chuyển hướng 
 
-+ Ví dụ 
+- Ví dụ 
 
 	```sh
 	find / -iname "*.sh" 2> /dev/null > output.txt
 	```
 	+ Tương tự như ví dụ trên, nhưng các kết quả sẽ được chuyển hướng đến file `output.txt` thay vì hiển thị lên trên màn hình
 
-+ Ví dụ 
+- Ví dụ 
 
 	```sh
 	sort < listfile | nl
@@ -118,7 +118,8 @@
 
 - Thường được sử dụng khi bạn muốn thu thập đầu ra của một ứng dụng nhưng cũng cần nhìn thấy kết quả trên màn hình. 
 
-- Ví dụ 
+- Ví dụ
+
 	```sh
  	find / -name "*.sh" | tee visibleresults.txt
  	``` 
@@ -134,5 +135,4 @@ chúng vào một lệnh khác theo yêu cầu
 	```sh
 	find / -name "*.sh" | xargs ls -al > myresults.txt  
     ```                     
-
     + Sẽ tìm tất cả các files có đuôi mở rộng `*.sh`, sau đó `xargs` sẽ lấy kết quả đó và cung cấp cho lệnh `ls -al` để hiển thị chi tiết của mỗi file và chuyển hướng đầu ra vào file `myresults.txt`

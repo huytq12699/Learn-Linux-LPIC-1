@@ -1,6 +1,7 @@
 # Linux Shell
 
 Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống Linux
+
 - `bash(bourne again shell)`: mặc định
 
 - `csh`: cú phép lập trình C
@@ -17,12 +18,14 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 
 	+ Các thiết lập quy định chức năng chung và vị trí cho các mục đích khác nhau
 
-	+ Cú pháp: 
+	+ Cú pháp:
+
 	   ```sh
 	   VARIABLE=path,command,alias
 	     (BIẾN=đường dẫn,lệnh,bí danh)
 	     ```
-	+ Ví dụ: 
+	+ Ví dụ:
+
 		```sh
 		CWD=/home/user/Documents
 		```
@@ -32,6 +35,7 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 - Người dùng có thể tạo các hàm tùy chỉnh của riêng mình trong Bash
 
 - Ví dụ:
+
 	```sh
 		 function hello()
 		{
@@ -65,6 +69,7 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 
 + `Trích dẫn 'yếu' hay dấu ngoặc kép`: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn 
 hoặc cho phép so khớp sẽ không được mở rộng. 
+	
 	Ví dụ:
 
 	+ `echo "$PATH"`, hiển thị lên giá trị của biến `PATH`
@@ -72,9 +77,9 @@ hoặc cho phép so khớp sẽ không được mở rộng.
  	+ `ls"*"` sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là '*
 
 + `Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi.
+	
 	Ví dụ:
 			`echo "$PATH"` sẽ in ra `$PATH` trên màn hình
 
-
-+ `history` Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
++ `history`: Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
 đã được thực thi trước đó

@@ -25,9 +25,9 @@ và các phiên bản cũ của Fedora
 
 	+ Vd: 
 
-			`zipper repos`
+		+ `zipper repos`
 
-			`zipper install vim`
+		+ `zipper install vim`
 
 - DNF (DNDIFIED YUM)
 

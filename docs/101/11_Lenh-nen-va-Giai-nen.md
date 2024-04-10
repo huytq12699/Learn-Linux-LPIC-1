@@ -1,6 +1,7 @@
 # Lệnh nén và giải nén trong Linux
 
 - Các option dùng với lệnh `tar`
+
 	+ `-c`: Tạo file nén.tar
 
 	+ `-x`: Giải file nén .tar
@@ -19,15 +20,28 @@
 
 	+ `--wildcards`: Tìm và xuất file bất kỳ trong file nén
 
-# Các lệnh nén
+## Các lệnh nén
 
 - Nén file/thư mục sang định dạng "tar": `# tar -cvf`
-	+ `# tar -cvf filenenA.tar /mnt/A` : Nén thư mục `A` thành `filenenA.tar` và show quá trình nén
+
+	+ Ví dụ:
+
+	```sh
+	# tar -cvf filenenA.tar /mnt/A
+	```
+	+ Nén thư mục `A` thành `filenenA.tar` và show quá trình nén
 
 - Nén file/thư mục sang định dạng "tar.gz": `# tar -cvzf`
-	+ `# tar -cvfz filenenA.tar.gz /mnt/A`: Nén thư mục `A` thành `filenenA.tar.gz` và show quá trình nén
 
-# Các lệnh giải nén
+	+ Ví dụ:
+
+	```sh
+	 # tar -cvfz filenenA.tar.gz /mnt/A
+	```
+
+	+ Nén thư mục `A` thành `filenenA.tar.gz` và show quá trình nén
+
+## Các lệnh giải nén
 
 + `tar -xvf filenenA.tar /mnt/A`
 
@@ -35,12 +49,14 @@
 
 + `tar -xvfj filenenA.tar.bz2 /mnt/A`
 
-# Thêm file và folder vào file nén
+## Thêm file và folder vào file nén
 
 - Thêm file `abc.txt` vào `filenenA.tar`
+
 	+ `# tar -rvf filenenA.tar abc.txt`
 
 - Thêm thư mục `A` vào `filenenA.tar`
+
 	+ `# tar -rvf filenenA.tar A`
 
 

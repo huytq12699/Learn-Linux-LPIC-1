@@ -1,4 +1,4 @@
-# File Globbing
+# Tìm kiếm file văn bản
 
 - `Dấu *` Được sử dụng để đại diện cho bất kỳ ký tự nào, bao gồm cả không có ký tự
 

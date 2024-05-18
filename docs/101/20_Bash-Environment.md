@@ -12,7 +12,7 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 
 # Bash Environment
 
-## Môi trường Bash
+### Môi trường Bash
 
 - Biến môi trường:
 
@@ -24,13 +24,14 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 	   VARIABLE=path,command,alias
 	     (BIẾN=đường dẫn,lệnh,bí danh)
 	     ```
+
 	+ Ví dụ:
 
 		```sh
 		CWD=/home/user/Documents
 		```
 
-## Bash Function(Hàm)
+### Bash Function(Hàm)
 
 - Người dùng có thể tạo các hàm tùy chỉnh của riêng mình trong Bash
 
@@ -43,7 +44,7 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 		 	}
 		 ```
 
-## Các câu lệnh trong Bash Environment
+### Các câu lệnh trong Bash Environment
 
 + `env` Lệnh hiển thị các biến môi trường
 
@@ -63,36 +64,37 @@ Shell là môi trường dòng lệnh mà bạn làm việc trong hệ thống L
 
 + `type` Được sử dụng để xác định kiểu của một đối tượng như là một hàm, file bí danh, tích hợp sẵn hoặc từ khóa. 
 
-	+ Ví dụ:
++ Ví dụ:
 
-	```sh 
-		type type
-		```
-	+ Lệnh trên sẽ hiển thị loại của lệnh "type"
+```sh 
+	type type
+	```
 
-+ `Trích dẫn 'yếu' hay dấu ngoặc kép`: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn 
-hoặc cho phép so khớp sẽ không được mở rộng. 
-	
-	+ Ví dụ:
+==> Lệnh trên sẽ hiển thị loại của lệnh "type"
+
+
++ `Trích dẫn 'yếu' hay dấu ngoặc kép`: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn hoặc cho phép so khớp sẽ không được mở rộng. 
+Ví dụ:
 
 	```sh
 		echo "$PATH"
 		```
-	+ Lệnh trên hiển thị lên giá trị của biến `PATH`
+==> Lệnh trên hiển thị lên giá trị của biến `PATH`
 
-	```sh
- 		ls"*"
- 		```
- 	+ Lệnh trên sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là `*`
+```sh
+ 	ls"*"
+ 	```
+
+==> Lệnh trên sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là `*`
+
 
 + `Trích dẫn 'mạnh'`: Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì được thực thi.
-	
-	+ Ví dụ:
+Ví dụ:
 
-	```sh
-			echo "$PATH"
-			```
-	+ Lệnh trên sẽ in ra `$PATH` trên màn hình
+```sh
+	echo "$PATH"
+	```
 
-+ `history`: Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh 
-đã được thực thi trước đó
+==> Lệnh trên sẽ in ra `$PATH` trên màn hình
+
++ `history`: Là một lệnh tích hợp sẵn trong Bash shell, được sử dụng để hiển thị danh sách các lệnh đã được thực thi trước đó

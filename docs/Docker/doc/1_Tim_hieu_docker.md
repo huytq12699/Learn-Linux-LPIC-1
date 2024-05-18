@@ -1,13 +1,19 @@
 # Docker
 
-Docker là một công cụ cho phép user tạo container images, đẩy hoặc kéo images từ các registries bên ngoài, chạy và quản lý container trong nhiều môi trường khác nhau
+## Tổng quan về Docker
 
-Docker là một ứng dụng mã nguồn mở cho phép đóng gói các ứng dụng, các phần mềm phụ thuộc lẫn nhau trong cùng một container. Container này sau đó có thể mang đi triển khai trên bất kì một hệ thống Linux phổ biến nào. Các container hoàn toàn độc lập với các container khác nhưng đều dùng chung kernel của HostOS
+- Docker là một công cụ cho phép user tạo container images, đẩy hoặc kéo images từ các registries bên ngoài, chạy và quản lý container trong nhiều môi trường khác nhau
 
-Docker có 2 phiên bản phổ biến:
-- Docker Community Edition (CE): Là phiên bản miễn phí và chủ yếu dựa vào các sản phẩm mã nguồn mở khác
-- Docker Enterprise (EE): Phiên bản dành cho các doanh nghiệp, khi sử dụng phiên bản này sẽ nhận được support từ nhà phát hành, ngoài ra còn có thêm tính năng quản lý và bảo mật
-Các thành phần trogn Docker Engine:
+- Docker là một ứng dụng mã nguồn mở cho phép đóng gói các ứng dụng, các phần mềm phụ thuộc lẫn nhau trong cùng một container. Container này sau đó có thể mang đi triển khai trên bất kì một hệ thống Linux phổ biến nào. Các container hoàn toàn độc lập với các container khác nhưng đều dùng chung kernel của HostOS
+
+- Docker có 2 phiên bản phổ biến:
+
+	+ Docker Community Edition (CE): Là phiên bản miễn phí và chủ yếu dựa vào các sản phẩm mã nguồn mở khác
+
+	+ Docker Enterprise (EE): Phiên bản dành cho các doanh nghiệp, khi sử dụng phiên bản này sẽ nhận được support từ nhà phát hành, ngoài ra còn có thêm tính năng quản 
+lý và bảo mật.
+
+## Các thành phần trong Docker Engine:
 
 ![](/docs/Docker/image/docker_element.png)
 
@@ -15,36 +21,51 @@ Các thành phần trogn Docker Engine:
 
 - Docker client (CLI): Cung cấp giao diện dòng lệnh cho người dùng, đồng thời cũng gửi request đến Docker daemon 
 
-- Docker Registry: Nơi lưu trữ Docker image. Docker Hub là một registry công khai mà bất cứ ai cũng có thể sử dụng và Docker được cấu hình để tìm kiếm image trên Docker Hub theo mặc định. Bạn thậm chí có thể chạy registry riêng của mình. Có 2 loại registry là public và private registry (tương tự như github và gitlab)
+- Docker Registry: Là nơi lưu trữ Docker image. Docker Hub là một registry công khai mà bất cứ ai cũng có thể sử dụng và Docker được cấu hình để tìm kiếm image trên Docker Hub theo mặc định. Bạn thậm chí có thể chạy registry riêng của mình. 
 
-Storage trong Docker là một tính năng quản lý data của Docker. Data ở đây có thể hiểu là các file được sinh ra trong quấ trình chạy ứng dụng ví dụ như log, data, report...
+	+ Có 2 loại registry là:  public và private registry (tương tự như github và gitlab)
 
-Docker Storage có 3 option là volumes, bind mounts, tmpfs mounts. Tùy vào nhu cầu mà chúng ta có thể sử dụng option phù hợp với mình:
+- Storage trong Docker là một tính năng quản lý data của Docker. Data ở đây có thể hiểu là các file được sinh ra trong quá trình chạy ứng dụng ví dụ như: log, data, report...
 
-- Volumes: Mount-point nằm ở `/var/lib/docker/volumes` của Docker host và được quản lý bằng Docker
+	+ Docker Storage có 3 option là: volumes, bind mounts, tmpfs mounts. Tùy vào nhu cầu mà chúng ta có thể sử dụng option phù hợp với mình:
 
-- Bind mounts: mount-points có thể nằm ở bất kỳ đâu trong Docker Host mà không bị quản lý bởi Docker 
+		+ `Volumes`: Mount-point nằm ở `/var/lib/docker/volumes` của Docker host và được quản lý bằng Docker
 
-- tmpfs mounts: data sẽ được lưu vào memory của Docker Host và sẽ mất đi khi khởi động lại hoặc stop container
+		+ `Bind mounts`: mount-points có thể nằm ở bất kỳ đâu trong Docker Host mà không bị quản lý bởi Docker 
+
+		+ `tmpfs mounts`: data sẽ được lưu vào memory của Docker Host và sẽ mất đi khi khởi động lại hoặc stop container
 
 ### Các thuật ngữ hay gặp trong Docker:
 
-- Docker image: Một Docker image là một read-only template dùng để tạo ra các containers. Image được cấu tạo theo dạng layer và tất cả các layer đều là read-only. Một image có thể được tạo ra dựa trên một image khác với một số tùy chỉnh bổ sung. Nói ngắn gọn, Docker image là nơi lưu trữ các cài đặt môi trường như OS, package, phần mềm cần chạy 
+- `Docker image`: Một Docker image là một read-only template dùng để tạo ra các containers. 
 
-- Dockerfile: Là một dạng file text không có phần đuôi mở rộng, chứa các đặc tả về một trường thực thi phần mềm, cấu trúc cho Docker image. Từ những câu lệnh đó, Docker sẽ build ra docker image
+	+ Image được cấu tạo theo dạng layer và tất cả các layer đều là read-only. 
 
-- Docker Container: Được tạo ra từ Docker image, là nơi chứa mọt thứ cần thiết để có thể chạy được ứng dụng. Là ảo hóa nhưng container lại rất nhẹ, có thể coi như là một process của hệ thống. Chỉ mất vài giây để start stop hoặc restart một container. Với một máy chủ vật lý, thay vì chạy một vài máy ảo truyền thống thì ta có thể chạy được vài chục, thậm chí vài trăm Docker Container
+	+ Một image có thể được tạo ra dựa trên một image khác với một số tùy chỉnh bổ sung. Nói ngắn gọn, Docker image là nơi lưu trữ các cài đặt môi trường như OS, package, phần mềm cần chạy. 
 
-- Docker Network: Có nhiệm vụ cung cấp private network (VLAN) để các container trên một host có thể liên lạc với nhau, hoặc các container trên nhiều host có thể liên lạc được với nhau
+- `Docker file`: Là một dạng file text không có phần đuôi mở rộng, chứa các đặc tả về một trường thực thi phần mềm, cấu trúc cho Docker image. Từ những câu lệnh đó, Docker sẽ build ra docker image.
 
-- Docker Volume: Là cơ chế tạo và sử dụng dữ liệu của Docker, có nhiệm vụ lưu trữ dữ liệu độc lập với vòng đời của container
+- `Docker Container`: Được tạo ra từ Docker image, là nơi chứa mọt thứ cần thiết để có thể chạy được ứng dụng. 
 
-- Docker Compose: Là công cụ dùng để định nghĩa và run multi-container cho Docker application. Với compose bạn sử dụng YAML để config các services cho application của bạn. Sau đó dùng Command để create và run từ những config đó. Cụ thể:
-	- Khai báo app's environment trong Dockerfile
-	- Khai báo các service cần thiết để chạy application trong file docker-compose.yml
-	- Run docker-compose up để start và run app
+	+ Là ảo hóa nhưng container lại rất nhẹ, có thể coi như là một process của hệ thống. 
 
-- Docker Hub: Gần tương tự như github nhưng dành cho DockerFile và Docker Image. Ở đây có những DockerFile, Images của người dùng cũng như những bản chính thức từ các nhà phát triển lớn như Google, Oracle ... Ngoài ra Docker Hub còn cho phép quản lý các image với những câu lệnh giống như Github như push, pull ... để bạn có thể dễ dàng quản lý image của mình
+	+ Chỉ mất vài giây để start stop hoặc restart một container. Với một máy chủ vật lý, thay vì chạy một vài máy ảo truyền thống thì ta có thể chạy được vài chục, thậm chí vài trăm Docker Container.
+
+- `Docker Network`: Có nhiệm vụ cung cấp private network (VLAN) để các container trên một host có thể liên lạc với nhau hoặc các container trên nhiều host có thể liên lạc được với nhau.
+
+- `Docker Volume`: Là cơ chế tạo và sử dụng dữ liệu của Docker, có nhiệm vụ lưu trữ dữ liệu độc lập với vòng đời của container
+
+- `Docker Compose`: Là công cụ dùng để định nghĩa và run multi-container cho Docker application. Với compose bạn sử dụng YAML để config các services cho application của bạn. Sau đó dùng Command để create và run từ những config đó. Cụ thể:
+
+	+ Khai báo app's environment trong Dockerfile.
+
+	+ Khai báo các service cần thiết để chạy application trong file `docker-compose.yml`
+
+	+ Run docker-compose up để start và run app.
+
+- `Docker Hub`: Gần tương tự như github nhưng dành cho DockerFile và Docker Image. Ở đây có những DockerFile, Images của người dùng cũng như những bản chính thức từ các nhà phát triển lớn như Google, Oracle... 
+
+	+ Ngoài ra Docker Hub còn cho phép quản lý các image với những câu lệnh giống như Github như push, pull ... để bạn có thể dễ dàng quản lý image của mình
 
 ### Các câu lệnh cơ bản trong Docker
 
@@ -82,7 +103,9 @@ Docker Storage có 3 option là volumes, bind mounts, tmpfs mounts. Tùy vào nh
 
 - Tải image từ registry về máy: `docker image pull centos` (image có tên `centos`)
 
-- Upload 1 image lên registry: `docker image push tubt16a6/centos:1.0` (Trong đó `tubt16a6` là tên tài khoản dockerhub, `centos` là tên của image local, `1.0` là tag gắn cho image)
+- Upload 1 image lên registry: `docker image push huytq12699/centos:1.0` 
+	
+	+ (Trong đó `huytq12699` là tên tài khoản dockerhub, `centos` là tên của image local, `1.0` là tag gắn cho image)
 
 - Lưu image thành 1 file nén: `docker image load -o /mnt/image_name.tar image_name`
 

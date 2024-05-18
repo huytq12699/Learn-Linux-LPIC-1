@@ -84,16 +84,16 @@ Hiển thị đường dẫn đầy đủ tới thư mục làm việc hiện t�
 
 - Ví dụ:
 
-	```sh 
-		type type
-		```
+```sh 
+	type type
+```
 
 ==> Lệnh trên sẽ hiển thị loại của lệnh "type"
 
 
-### `Trích dẫn 'yếu' hay dấu ngoặc kép` 
+### `Trích dẫn 'yếu' 
 
-Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn hoặc cho phép so khớp sẽ không được mở rộng. 
+Trích dẫn "yếu" hoặc dấu ngoặc kép: Mở rộng các biến nhưng các ký tự được sử dụng cho việc thay thế đường dẫn hoặc cho phép so khớp sẽ không được mở rộng. 
 
 - Ví dụ:
 
@@ -106,7 +106,7 @@ Mở rộng các biến nhưng các ký tự được sử dụng cho việc tha
 
 ```sh
  	ls"*"
- ```
+```
 
 + Lệnh trên sẽ không hoạt động vì lệnh `ls` sẽ tìm kiếm tập tin có tên là `*`
 
@@ -119,7 +119,8 @@ Bên trong trích dẫn mạnh hoặc dấu ngoặc đơn, không có gì đư�
 
 ```sh
 	echo "$PATH"
-	```
+```
+
 + Câu lệnh ở trên sẽ in ra `$PATH` trên màn hình.
 
 ### `history` 
